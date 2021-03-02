@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS 面试题 | thorn</title>
+    <meta name="description" content="If it doesn&#39;t challenge you, it won&#39;t change you">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/hero.jpeg">
+    
+    <link rel="preload" href="/assets/css/0.styles.9970a1b7.css" as="style"><link rel="preload" href="/assets/js/app.ec9e1db8.js" as="script"><link rel="preload" href="/assets/js/2.5105d25b.js" as="script"><link rel="preload" href="/assets/js/74.e8eba774.js" as="script"><link rel="prefetch" href="/assets/js/10.447d264d.js"><link rel="prefetch" href="/assets/js/11.a67126fe.js"><link rel="prefetch" href="/assets/js/12.e67d7c03.js"><link rel="prefetch" href="/assets/js/13.e74699b1.js"><link rel="prefetch" href="/assets/js/14.daac54b3.js"><link rel="prefetch" href="/assets/js/15.0f024910.js"><link rel="prefetch" href="/assets/js/16.99964836.js"><link rel="prefetch" href="/assets/js/17.58bbf716.js"><link rel="prefetch" href="/assets/js/18.b8ea0368.js"><link rel="prefetch" href="/assets/js/19.a4ccf80a.js"><link rel="prefetch" href="/assets/js/20.920ab0ea.js"><link rel="prefetch" href="/assets/js/21.485dff2a.js"><link rel="prefetch" href="/assets/js/22.e07e8fa1.js"><link rel="prefetch" href="/assets/js/23.5e7a786a.js"><link rel="prefetch" href="/assets/js/24.ee0a2e23.js"><link rel="prefetch" href="/assets/js/25.9a5d945f.js"><link rel="prefetch" href="/assets/js/26.8880cc0a.js"><link rel="prefetch" href="/assets/js/27.2d10da60.js"><link rel="prefetch" href="/assets/js/28.72612751.js"><link rel="prefetch" href="/assets/js/29.5e8ef889.js"><link rel="prefetch" href="/assets/js/3.0fd003c2.js"><link rel="prefetch" href="/assets/js/30.fc64741a.js"><link rel="prefetch" href="/assets/js/31.09b7886c.js"><link rel="prefetch" href="/assets/js/32.8f5c32e1.js"><link rel="prefetch" href="/assets/js/33.678e242a.js"><link rel="prefetch" href="/assets/js/34.a370b365.js"><link rel="prefetch" href="/assets/js/35.d9636a96.js"><link rel="prefetch" href="/assets/js/36.80a5d3d9.js"><link rel="prefetch" href="/assets/js/37.a9bc4c8a.js"><link rel="prefetch" href="/assets/js/38.8d137c20.js"><link rel="prefetch" href="/assets/js/39.d950f39f.js"><link rel="prefetch" href="/assets/js/4.c35620b1.js"><link rel="prefetch" href="/assets/js/40.7cdaeeec.js"><link rel="prefetch" href="/assets/js/41.e9a82ee2.js"><link rel="prefetch" href="/assets/js/42.75128b4a.js"><link rel="prefetch" href="/assets/js/43.6686c4c0.js"><link rel="prefetch" href="/assets/js/44.8bbf4319.js"><link rel="prefetch" href="/assets/js/45.aa0e23d2.js"><link rel="prefetch" href="/assets/js/46.fc8d5367.js"><link rel="prefetch" href="/assets/js/47.67f8133f.js"><link rel="prefetch" href="/assets/js/48.e9014c13.js"><link rel="prefetch" href="/assets/js/49.adbcf55e.js"><link rel="prefetch" href="/assets/js/5.9a08207a.js"><link rel="prefetch" href="/assets/js/50.fbcee007.js"><link rel="prefetch" href="/assets/js/51.584fc3ee.js"><link rel="prefetch" href="/assets/js/52.e23bd034.js"><link rel="prefetch" href="/assets/js/53.6c7ec624.js"><link rel="prefetch" href="/assets/js/54.340c591f.js"><link rel="prefetch" href="/assets/js/55.f5fdcdf9.js"><link rel="prefetch" href="/assets/js/56.183d3539.js"><link rel="prefetch" href="/assets/js/57.ba39cb78.js"><link rel="prefetch" href="/assets/js/58.c559c57b.js"><link rel="prefetch" href="/assets/js/59.e533ea69.js"><link rel="prefetch" href="/assets/js/6.7cfe4850.js"><link rel="prefetch" href="/assets/js/60.a1aef619.js"><link rel="prefetch" href="/assets/js/61.a8fca4de.js"><link rel="prefetch" href="/assets/js/62.3e7a3500.js"><link rel="prefetch" href="/assets/js/63.2d6fff96.js"><link rel="prefetch" href="/assets/js/64.9e127ca3.js"><link rel="prefetch" href="/assets/js/65.db55fab6.js"><link rel="prefetch" href="/assets/js/66.98a4730e.js"><link rel="prefetch" href="/assets/js/67.1cb5241f.js"><link rel="prefetch" href="/assets/js/68.e19546d2.js"><link rel="prefetch" href="/assets/js/69.7bfa8287.js"><link rel="prefetch" href="/assets/js/7.023c2539.js"><link rel="prefetch" href="/assets/js/70.2f28cf65.js"><link rel="prefetch" href="/assets/js/71.dc260279.js"><link rel="prefetch" href="/assets/js/72.30dec7cf.js"><link rel="prefetch" href="/assets/js/73.ea684256.js"><link rel="prefetch" href="/assets/js/75.0011fa76.js"><link rel="prefetch" href="/assets/js/76.68c4a18b.js"><link rel="prefetch" href="/assets/js/77.b36b7d34.js"><link rel="prefetch" href="/assets/js/78.9f3c27db.js"><link rel="prefetch" href="/assets/js/79.f2b1de05.js"><link rel="prefetch" href="/assets/js/8.44de4194.js"><link rel="prefetch" href="/assets/js/9.cab54723.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9970a1b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">thorn</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">
+  interview
+</a></div><div class="nav-item"><a href="/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  Life
+</a></div><div class="nav-item"><a href="/book/" class="nav-link">
+  Read
+</a></div><div class="nav-item"><a href="/blogroll/" class="nav-link">
+  Blogroll
+</a></div> <a href="https://github.com/thorn929" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">
+  interview
+</a></div><div class="nav-item"><a href="/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  Life
+</a></div><div class="nav-item"><a href="/book/" class="nav-link">
+  Read
+</a></div><div class="nav-item"><a href="/blogroll/" class="nav-link">
+  Blogroll
+</a></div> <a href="https://github.com/thorn929" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>前端</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/interview/js.html" class="active sidebar-link">JS 面试题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/interview/js.html#_1-以-let-str-abc-实现reverse" class="sidebar-link">1. 以 let str = 'abc' 实现reverse</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_2-针对-var-arr-3-4-5-22-1-3-写一个排序函数，对数组进行由小到大排序-（注意不要使用js内置的排序相关函数）" class="sidebar-link">2. 针对 var arr = [3,4,5,22,1,3]; 写一个排序函数，对数组进行由小到大排序 （注意不要使用js内置的排序相关函数）</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_3-数组去重至少2种" class="sidebar-link">3. 数组去重至少2种</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_3-去掉-var-str-abc-beijing-；中的所有空格" class="sidebar-link">3. 去掉 var str = “  abc beijing ”；中的所有空格</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_4-判断字符串-var-str-abdcddsseeed-出现最多的字符，并统计出现次数" class="sidebar-link">4. 判断字符串 var str = ‘abdcddsseeed’ 出现最多的字符，并统计出现次数</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_5-js-实现继承" class="sidebar-link">5. js 实现继承</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_6-实现一个数据的深度拷贝，必问原生如何实现" class="sidebar-link">6. 实现一个数据的深度拷贝，必问原生如何实现</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_7-各打印什么？-为什么？" class="sidebar-link">7. 各打印什么？ 为什么？</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_8-输出什么？-为什么" class="sidebar-link">8. 输出什么？ 为什么</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_9-输出什么-为什么" class="sidebar-link">9. 输出什么 为什么</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_10-怎么用min-或者是max-查找数组里的最大值或者最小值" class="sidebar-link">10. 怎么用min 或者是max 查找数组里的最大值或者最小值</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_11-javascript-12345678-改为-12，345，678，-也就是千位分隔" class="sidebar-link">11. javascript 12345678  改为 12，345，678， 也就是千位分隔</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_12-闭包问题" class="sidebar-link">12. 闭包问题</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_13-输出结果，-为什么" class="sidebar-link">13. 输出结果， 为什么</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_14-输出结果，-为什么" class="sidebar-link">14. 输出结果， 为什么</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_15-let-str-你好，abc-字符串长度" class="sidebar-link">15. let str = '你好，abc' 字符串长度</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_16-object-defineproperty-有什么缺点-有什么方法" class="sidebar-link">16.  Object.defineProperty()有什么缺点 有什么方法</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_17-prototype-和-proto-区别是什么" class="sidebar-link">17.  prototype 和 _proto_ 区别是什么</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_40-手写一个-bind-函数" class="sidebar-link">40. 手写一个 bind 函数</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_41-微任务和宏任务" class="sidebar-link">41. 微任务和宏任务</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_42-用过-nodejs-的-eventemitter-模块吗，它是怎么实现功能的，步骤是什么" class="sidebar-link">42. 用过 NodeJS 的 EventEmitter 模块吗，它是怎么实现功能的，步骤是什么</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_43-js-new-过程中发生了什么" class="sidebar-link">43. JS new 过程中发生了什么</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_44-settimeout-和-setinterval-方法有执行顺序吗" class="sidebar-link">44. setTimeout 和 setInterval 方法有执行顺序吗</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_45-手写一个-call-函数" class="sidebar-link">45. 手写一个 call 函数</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_46-分析这一段代码的返回结果" class="sidebar-link">46. 分析这一段代码的返回结果</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_47-js-代码在-v8-中的优化" class="sidebar-link">47. JS 代码在 V8 中的优化</a></li><li class="sidebar-sub-header"><a href="/interview/js.html#_49-写出以下函数打印结果" class="sidebar-link">49. 写出以下函数打印结果</a></li></ul></li><li><a href="/interview/css.html" class="sidebar-link">CSS 面试题</a></li><li><a href="/interview/framework.html" class="sidebar-link">框架面试题</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>编程基础</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="js-面试题"><a href="#js-面试题" class="header-anchor">#</a> JS 面试题</h1> <ul><li>本文是自己在面试时遇到的，面的都是十几k的职位</li> <li>所有的答案都是我在翻阅资料，思考验证之后写出的，但能力有限，本人的答案未必是最优的，如果您有更好的答案，欢迎给我留言</li> <li>本文答案也借用优秀答案，已经添加链接，如有侵权，请联系我删除</li> <li>如果有错误或者不严谨的地方，请务必给予指正，以免误导他人</li> <li>如果喜欢或者有所启发，欢迎点赞，对我也是一种鼓励</li></ul> <h2 id="_1-以-let-str-abc-实现reverse"><a href="#_1-以-let-str-abc-实现reverse" class="header-anchor">#</a> 1. 以 let str = 'abc' 实现reverse</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>    let str = 'abc'
+    function rev(str) {
+      let arr = str.split('')
+      let tem = []
+      for (let i = arr.length-1; i &gt;= 0; i--) {
+         tem.push(arr[i])
+      }
+      return tem.join('')
+    }
+    rev(str)
+    console.log(rev(str))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="_2-针对-var-arr-3-4-5-22-1-3-写一个排序函数，对数组进行由小到大排序-（注意不要使用js内置的排序相关函数）"><a href="#_2-针对-var-arr-3-4-5-22-1-3-写一个排序函数，对数组进行由小到大排序-（注意不要使用js内置的排序相关函数）" class="header-anchor">#</a> 2. 针对 var arr = [3,4,5,22,1,3]; 写一个排序函数，对数组进行由小到大排序 （注意不要使用js内置的排序相关函数）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 冒泡排序： 随便拿出一个数与后者比较，如果前者比后者大，那么两者交换位置，
+    let arr = [5,2,3,1,4]
+    function bubbleSort(arr) {
+      let arrLen = arr.length
+      for (let i = 0; i &lt; arrLen; i++){
+        for (let j = i; j &lt; arrLen; j++){
+          let tempi = arr[i]; 
+          let tempj = arr[j];
+          if (tempi &gt; tempj) {
+            arr[i] = tempj;
+            arr[j] = tempi;
+          }
+        }
+      } 
+      return arr
+    }
+
+    console.log(bubbleSort(arr))
+  /* 快速排序 ： 
+    * 1. 以一个数为基准（基准值可以任意选择，选择中间的值容易理解 
+    * 2. 按照顺序，将每个元素与&quot;基准&quot;进行比较，形成两个子集，一个&quot;小于3&quot;，另一个&quot;大于等于3&quot;。
+    * 3. 对两个子集不断重复第一步和第二步，直到所有子集只剩下一个元素为止
+  */
+    
+  let arr = [5, 2, 3, 1, 4]
+  function quickSort(arr) {
+    // 如果数组为1那就没必要比较了
+  　if (arr.length &lt;= 1) { return arr }
+    // 取中间索引值
+    let pivotIndex = Math.floor(arr.length / 2)
+    // 获取中间值
+    let pivot = arr.splice(pivotIndex, 1)[0]
+    let left = []
+    let right = []
+    for (let i = 0; i &lt; arr.length; i ++) {
+      if(arr[i] &lt; pivot) {
+        left.push(arr[i])
+      } else {
+        right.push(arr[i])
+      }
+    }
+    // 使用递归不断重复这个过程
+    return quickSort(left).concat([pivot], quickSort(right))
+  }
+  console.log(quickSort(arr)) 
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><h2 id="_3-数组去重至少2种"><a href="#_3-数组去重至少2种" class="header-anchor">#</a> 3. 数组去重至少2种</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 1. from &amp;&amp; set
+ let arr = [1, 1, 4, 50, 50, 6, 2, 2]
+ let res = Array.from(new Set(arr))
+ console.log(res)
+
+// 2. filter &amp;&amp; indexOf
+ let arr = [2, 2, 33, 44, 33]
+ let res = arr.filter((item, index, arr) =&gt; {
+    return arr.indexOf(item) == index
+ })
+  console.log(res)
+  
+// 3. forEach &amp;&amp; includes
+  let arr = [2, 2, 33, 44, 33]
+  let res = []
+  arr.forEach((item) =&gt; {
+    if (!res.includes(item)) {
+      res.push(item)
+    }
+  })
+  console.log(res)
+  
+// 4. filter &amp;&amp;  Map
+ let arr = [2, 2, 33, 44, 33]
+ const tem = new Map();
+ let res = arr.filter((item) =&gt; !tem.has(item) &amp;&amp; tem.set(item, 1))
+ console.log(res)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="_3-去掉-var-str-abc-beijing-；中的所有空格"><a href="#_3-去掉-var-str-abc-beijing-；中的所有空格" class="header-anchor">#</a> 3. 去掉 var str = “  abc beijing ”；中的所有空格</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code> let str = ' adb ddd '
+ let res = str.replace(/\s+/g, &quot;&quot;)
+ console.log(res)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="_4-判断字符串-var-str-abdcddsseeed-出现最多的字符，并统计出现次数"><a href="#_4-判断字符串-var-str-abdcddsseeed-出现最多的字符，并统计出现次数" class="header-anchor">#</a> 4. 判断字符串 var str = ‘abdcddsseeed’ 出现最多的字符，并统计出现次数</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>let str = 'asdasddsfdsfadsfdghdadsdfdgdasd';
+function getMax(str) {
+  let obj = {};
+  for (let i in str) {
+    if (obj[str[i]]) {
+      obj[str[i]]++
+    } else {
+      obj[str[i]] = 1
+    }
+  }
+  
+  let num = 0
+  let number = 0
+  for (var i in obj) {
+    //如果当前项大于下一项
+    if (obj[i] &gt; num) {
+      //就让当前值更改为出现最多次数的值
+      num = obj[i]
+      number = i
+    }
+  }
+  console.log('最多的值是' +number+ '出现次数为' + num);
+}
+
+getMax(str);
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h2 id="_5-js-实现继承"><a href="#_5-js-实现继承" class="header-anchor">#</a> 5. js 实现继承</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 构造函数继承
+function Super(){
+	this.name = [&quot;张三&quot;,&quot;李四&quot;]
+}
+function Sub(){
+	Super.call(this)
+}
+let a = new Sub();
+a.name.push(&quot;王五&quot;)
+ // “张三&quot;,&quot;李四&quot;，&quot;王五&quot;
+console.log(a.name);
+
+let b = new Sub()
+//// “张三&quot;,&quot;李四&quot;
+console.log(b.name)
+
+// Class 继承
+class Fathter {
+    constructor(name) {
+      this.name = name
+    }
+    hello() {
+      console.log('Hello, ' + this.name)
+    }
+}
+class Son extends Fathter {
+    constructor(name) {
+      // 记得用super调用父类的构造方法
+        super(name)
+        console.log(name)
+    }
+}
+let res = new Son('张三')
+res.hello()
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h2 id="_6-实现一个数据的深度拷贝，必问原生如何实现"><a href="#_6-实现一个数据的深度拷贝，必问原生如何实现" class="header-anchor">#</a> 6. 实现一个数据的深度拷贝，必问原生如何实现</h2> <ol><li>简单粗暴, 但函数、正则、Symbol都没有被正确的复制</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>  JSON.parse(JSON.stringify(obj));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>考虑对象相互引用以及 Symbol 拷贝的情况</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[木易杨](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/)
+[深度拷贝](https://juejin.im/post/5abb55ee6fb9a028e33b7e0a)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="_7-各打印什么？-为什么？"><a href="#_7-各打印什么？-为什么？" class="header-anchor">#</a> 7. 各打印什么？ 为什么？</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>  function Foo(){
+       getName = function () {
+         console.log(1);
+       }
+       return this;
+   }
+   Foo.getName = function() {
+     console.log(2);
+   };
+   Foo.prototype.getName = function(){
+     console.log(3);
+   };
+   var getName = function(){
+     console.log(4);
+   };
+   function getName(){
+     console.log(5)
+   };
+
+   Foo.getName(); // 2
+   getName(); // 4
+   Foo().getName(); // 1
+   getName(); // 1
+   new Foo.getName(); // 2
+   new Foo().getName(); // 3 相当于 var f = new Foo（）  f.getName()     
+   new new Foo().getName(); // 3
+   
+// 这道题相当经典了 花点时间自己去看下吧
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="_8-输出什么？-为什么"><a href="#_8-输出什么？-为什么" class="header-anchor">#</a> 8. 输出什么？ 为什么</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>function fun() {
+ this.a = 0
+ this.b = function() {
+   console.log(this)
+   console.log(this.a)
+ }
+}
+fun.prototype = {
+ b: function() {
+   this.a = 20
+   console.log(this.a)
+ },
+ c: function() {
+   this.a = 30
+   console.log(this.a)
+ }
+}
+
+var my_fun = new fun();
+//私有方法	this=&gt;my_fun
+my_fun.b();	
+console.log(my_fun.a);
+//公有方法	this=&gt;my_fun this.a = 30（私有属性a修改为30）
+my_fun.c();	
+console.log(my_fun.a);
+var my_fun2 = new fun();
+console.log(my_fun2.a);
+//this=&gt;my_fun2.__proto__ 当前实例·通过原型链在共有属性增加的了一a:30
+my_fun2.__proto__.c();	
+console.log(my_fun2.a);
+console.log(my_fun2.__proto__.a);
+// 0,0,30,30,0,30,0,30
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><h2 id="_9-输出什么-为什么"><a href="#_9-输出什么-为什么" class="header-anchor">#</a> 9. 输出什么 为什么</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code> function setName(obj){
+   obj.name = &quot;Tom&quot;
+   obj = new Object()
+   obj.name = 'Mike'
+ }
+  
+ var person = new Object()
+ setName(person)
+ console.log(person.name) // &quot;Tom&quot;
+ 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="_10-怎么用min-或者是max-查找数组里的最大值或者最小值"><a href="#_10-怎么用min-或者是max-查找数组里的最大值或者最小值" class="header-anchor">#</a> 10. 怎么用min 或者是max 查找数组里的最大值或者最小值</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>  // ES5 的写法
+  let arr = [ 2,4,5,1]
+  console.log(Math.min.apply(null, arr))
+  
+  // ES6 的写法
+   console.log(Math.max(...[14, 3, 77, 30]))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_11-javascript-12345678-改为-12，345，678，-也就是千位分隔"><a href="#_11-javascript-12345678-改为-12，345，678，-也就是千位分隔" class="header-anchor">#</a> 11. javascript 12345678  改为 12，345，678， 也就是千位分隔</h2> <ol><li>写不出来才可以这样写哈 要不面试官打你啊哈哈</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>let num = 12345678
+console.log(num.toLocaleString())
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="2"><li>求模</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>let num = 12345678
+function toThousands(num) {
+    var result = '', counter = 0;
+    num = (num || 0).toString();
+    for (var i = num.length - 1; i &gt;= 0; i--) {
+        counter++;
+        result = num.charAt(i) + result;
+        if (!(counter % 3) &amp;&amp; i != 0) { result = ',' + result; }
+    }
+    return result;
+}
+console.log(toThousands(num))
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><ol start="3"><li>正则</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 3-1
+let num = 12345678
+function toThousands(num) {
+    return (num || 0).toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+}
+console.log(toThousands(num))
+// 3-2
+let num = 12345678
+function toCurrency(num){
+    var parts = num.toString().split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return parts.join('.');
+}
+console.log(toCurrency(num))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><a href="https://mrluo.life/article/detail/115" target="_blank" rel="noopener noreferrer">相关链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_12-闭包问题"><a href="#_12-闭包问题" class="header-anchor">#</a> 12. 闭包问题</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>function f1(){
+      var n=999;
+      nAdd=function(){n+=1}
+      function f2(){
+          console.log(n);
+      }
+      return f2;
+  }
+  var result=f1();
+  result(); // 999
+  nAdd();
+  result(); // 1000
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="_13-输出结果，-为什么"><a href="#_13-输出结果，-为什么" class="header-anchor">#</a> 13. 输出结果， 为什么</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>var name = &quot;The Window&quot;;
+  var object = {
+      name : &quot;My Object&quot;,
+      getNameFunc : function(){
+          return function(){
+              return this.name;
+          };
+      }
+  };
+console.log(object.getNameFunc()()); // the window
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="_14-输出结果，-为什么"><a href="#_14-输出结果，-为什么" class="header-anchor">#</a> 14. 输出结果， 为什么</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code> var length = 1
+  function fn() {
+      console.log(this.length)
+  } 
+  
+  var obj = {
+    length: 3,
+    me:function(fn){
+      fn() // 1
+      arguments[0]() // 2
+    }
+  }
+  obj.me(fn, 1)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_15-let-str-你好，abc-字符串长度"><a href="#_15-let-str-你好，abc-字符串长度" class="header-anchor">#</a> 15. let str = '你好，abc' 字符串长度</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>let str = '你好，abc'
+function getLength(str){
+  let length = 0
+  let reg = /[\u4e00-\u9fa5]/
+  for (let i = 0; i &lt; str.length; i++) {
+      if (reg.test(str.charAt(i))) {
+        length +=2
+      } else {
+        length ++
+      }
+  }
+  return length
+}
+console.log(getLength(str))
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="_16-object-defineproperty-有什么缺点-有什么方法"><a href="#_16-object-defineproperty-有什么缺点-有什么方法" class="header-anchor">#</a> 16.  Object.defineProperty()有什么缺点 有什么方法</h2> <ol><li>无法监控到数组下标的变化，导致直接通过数组的下标给数组设置值，不能实时响应。</li> <li>只能劫持对象的属性,因此我们需要对每个对象的每个属性进行遍历。Vue里，是通过递归以及遍历data 对象来实现对数据的监控的，如果属性值也是对象那么需要深度遍历,显然如果能劫持一个完整的对象，不管是对操作性还是性能都会有一个很大的提升。</li></ol> <p>利用 Proxy</p> <p><a href="https://juejin.im/post/5bf3e632e51d452baa5f7375" target="_blank" rel="noopener noreferrer">参考 -- 摒弃 Object.defineProperty，基于 Proxy 的观察者机制探索<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_17-prototype-和-proto-区别是什么"><a href="#_17-prototype-和-proto-区别是什么" class="header-anchor">#</a> 17.  prototype 和 <strong>proto</strong> 区别是什么</h2> <ul><li><p>任何对象都有一个 <code>__proto__</code> 属性。</p></li> <li><p>任何方法都有一个 <code>prototype</code> 属性。</p></li></ul> <p><code>__proto__</code>指向 new 出来的构造函数的原型<code>prototype</code>。</p> <p><code>prototype</code> 是一个对象，当函数被定义的时候默认被创建的，它的作用很像 java 中的静态属性/方法。其中的对象可以给所有实例使用。</p> <p>需要注意的是：</p> <p><code>prototype</code> 也是一个对象 ，所以其中也有一个<code>__proto__</code>属性，指向对象的原型 <code>Object.protytype</code>。</p> <p><code>Object</code> 本身是构造函数，继承了 Function.prototype。<code>Object.__proto__ === Function.prototype</code></p> <p><code>Function</code> 本身就是函数，继承了 Function.prototype。<code>Function.__proto__ === Function.prototype</code></p> <p>举一个例子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token constant">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">A</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">A</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>任何一个对象都有一个<code>__proto__</code>属性，指向构造函数的原型 prototype，而 prototype 也是一个对象，也有一个<code>__proto__</code>属性，这样一环接一环，就形成了一个链，到最后 Object.protytype 截止。</p> <ul><li>函数对象有 <code>__proto__</code> 和 prototype 属性。</li> <li>非函数对象只有 <code>__proto__</code> 属性。</li> <li>prototype 中有 <code>__proto__</code> 属性。且是 Object 构造函数创建的。</li> <li>函数对象 <code>__proto__</code> 指向它的创建者及 Function 构造函数。</li> <li>Function 构造函数 <code>__proto__</code> 指向它自己。</li> <li>Object 对象的 prototype 中的 <code>__proto__</code> 是 null。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[参考刘小夕解答](https://juejin.im/post/5cab0c45f265da2513734390)
+## 18.  打印什么 为什么
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>var a = {n:1};<br>
+var b = a; // 持有a，以回查<br>
+a.x = a = {n:2};<br>
+console.log(a.x);// --&gt; undefined<br>
+console.log(b.x);// --&gt; {n:2}</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 19. 打印什么 为什么
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>var y = 1;
+if (function f(){}) {
+y += typeof f;
+}
+console.log(y); // 1undefined</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 20. 打印什么 为什么
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>var a = 0
+function b(){
+console.log(a) // fun a
+a = 10
+console.log(a) // 10
+return;
+function a(){}
+}
+b()
+console.log(a) // 0</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 21. 说一下防抖和节流 什么场景下用
+#### 防抖
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>概念：
+1. 在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+2. 多次触发事件后，事件处理函数只执行一次，并且是在触发操作结束时执行。</p> <p>应用场景:
+1. 文本输入的验证（连续输入文字后发送 ajax 请求进行验证，验证一次就好）
+2. 给按钮加函数防抖防止表单多次提交。</p> <p>生活实例：
+如果有人进电梯（触发事件），那电梯将在10秒钟后出发（执行事件监听器），这时如果又有人进电梯了（在10秒内再次触发该事件），我们又得等10秒再出发（重新计时）。</p> <p>代码</p> <p>function debounce(func, interval = 100){
+let timer;
+return (...args) =&gt; {
+if (timer) {
+clearTimeout(timer);
+}
+timer = setTimeout(() =&gt; {
+func.apply(func, args);
+}, interval);
+}
+}</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+#### 节流
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>概念：
+规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行，如果在同一个单位时间内某事件被触发多次，只有一次能生效</p> <p>应用场景:
+滚动刷新如 touchmove, mousemove, scroll。</p> <p>生活实例：（实例忘记参考谁的了，看到我添加连接）</p> <ol><li>我们知道目前的一种说法是当 1 秒内连续播放 24 张以上的图片时，在人眼的视觉中就会形成一个连贯的动画，所以在电影的播放（以前是，现在不知道）中基本是以每秒 24 张的速度播放的，为什么不 100 张或更多是因为 24 张就可以满足人类视觉需求的时候，100 张就会显得很浪费资源</li> <li>假设电梯一次只能载一人的话，10 个人要上楼的话电梯就得走 10 次，是一种浪费资源的行为；而实际生活正显然不是这样的，当电梯里有人准备上楼的时候如果外面又有人按电梯的话，电梯会再次打开直到满载位置，从电梯的角度来说，这时一种节约资源的行为（相对于一次只能载一个人）。。</li></ol> <p>代码</p> <p>function throttle(fn, interval = 100) {
+let canRun = true; // 通过闭包保存一个标记
+return (...args) =&gt; {
+if (!canRun) return; // 在函数开头判断标记是否为true，不为true则return
+canRun = false; // 立即设置为false
+setTimeout(() =&gt; { // 将外部传入的函数的执行放在setTimeout中
+fn.apply(fn, args)
+// 最后在setTimeout执行完毕后再把标记设置为true(关键)表示可以执行下一次循环了。当定时器没有执行的时候标记永远是false，在开头被return掉
+canRun = true;
+}, interval);
+};
+}</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 22. 监测数组类型有几种方式 有什么区别
++ instanceof
+  + instanceof不一定能保证检测的结果一定正确，因为只要是在原型链上的都会返回true ，arr instanceof Object 也返回true
++ Array.isArray()   
+   + 兼容性问题
++ Object.prototype.toString.call()
+  + 较好方案
+## 23. 观察者模式和发布订阅模式的写一下 说一下也行 区别是什么
+
+[木易杨-观察者模式和订阅-发布模式的区别,适用场景](https://www.muyiy.cn/question/design/23.html)
+
+[发布订阅模式，在工作中它的能量超乎你的想象
+](https://juejin.im/post/5b125ad3e51d450688133f22)
+
+[不好意思，观察者模式跟发布订阅模式就是不一样
+](https://juejin.im/post/5af05d406fb9a07a9e4d2799)
+## 24. 打印什么 为什么
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>function foo(a) {
+var a;
+return a;
+}
+function bar(a) {
+var a = 'bye';
+return a;
+}
+[foo('hello'), bar('hello')] // hello bye</p> <p>// 在两个函数里, a作为参数其实已经声明了, 所以 var a; var a = 'bye' 其实就是 a; a ='bye'</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 25. 说一下原型链
+
+原型链解决的主要是继承问题。
+
+每个对象拥有一个原型对象，通过 proto (读音: dunder proto) 指针指向其原型对象，并从中继承方法和属性，同时原型对象也可能拥有原型，这样一层一层，最终指向 null(==Object.proptotype.__proto__ 指向的是null==)。这种关系被称为原型链 (prototype chain)，通过原型链一个对象可以拥有定义在其他对象中的属性和方法。
+构造函数 Parent、Parent.prototype 和 实例 p 的关系如下:(==p.__proto__ === Parent.prototype==)
+
+[参考刘小夕解答](https://juejin.im/post/5cab0c45f265da2513734390)
+
+##26 输出什么
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>var name = &quot;World!&quot;;
+(function() {
+if(typeof name=== 'undefined'){
+var name='Jack';
+console.log('Goodbye'+name);</p> <div class="language- extra-class"><pre><code>} else {
+  console.log('hello'+name);
+}
+</code></pre></div><p>})()</p> <p>// Goodbye Jack</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+## 27. 一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级。求该青蛙跳上一个 n 级的台阶总共有多少种跳法。
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>跳到 n 阶假设有 f(n)种方法。</p> <p>往前倒退，如果青蛙最后一次是跳了 2 阶，那么之前有 f(n-2)种跳法; 如果最后一次跳了 1 阶，那么之前有 f(n-1)种跳法。</p> <p>所以：f(n) = f(n-1) + f(n-2)。就是斐波那契数列</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>参考 
+## 28. 打印什么
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>class Chameleon {
+static colorChange(newColor) {
+this.newColor = newColor
+return this.newColor
+}</p> <p>constructor({ newColor = 'green' } = {}) {
+this.newColor = newColor
+}
+}</p> <p>const freddie = new Chameleon({ newColor: 'purple' })
+freddie.colorChange('orange')</p> <p>// 会报错
+colorChange是一个静态方法。静态方法被设计为只能被创建它们的构造器使用（也就是 Chameleon），并且不能传递给实例。因为 freddie 是一个实例，静态方法不能被实例使用，因此抛出了 TypeError 错误。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+[解答参考](https://github.com/lydiahallie/javascript-questions/blob/master/zh-CN/README-zh_CN.md)
+
+## 29. 打印什么 为什么
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>function* generator(i) {
+yield i;
+yield i * 2;
+}</p> <p>const gen = generator(10);</p> <p>console.log(gen.next().value); // 10
+console.log(gen.next().value); // 20</p> <p>一般的函数在执行之后是不能中途停下的。但是，生成器函数却可以中途“停下”，之后可以再从停下的地方继续。当生成器遇到yield关键字的时候，会生成yield后面的值。注意，生成器在这种情况下不 返回 (return )值，而是 生成 (yield)值。</p> <p>首先，我们用10作为参数i来初始化生成器函数。然后使用next()方法一步步执行生成器。第一次执行生成器的时候，i的值为10，遇到第一个yield关键字，它要生成i的值。此时，生成器“暂停”，生成了10。</p> <p>然后，我们再执行next()方法。生成器会从刚才暂停的地方继续，这个时候i还是10。于是我们走到了第二个yield关键字处，这时候需要生成的值是i*2，i为10，那么此时生成的值便是20。所以这道题的最终结果是10,20。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[参考MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+
+[解答参考](https://github.com/lydiahallie/javascript-questions/blob/master/zh-CN/README-zh_CN.md)
+
+## 30 打印什么
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>const num = parseInt(&quot;7*6&quot;, 10);
+console.log(num) // 7</p> <p>parseInt检查字符串中的字符是否合法. 一旦遇到一个在指定进制中不合法的字符后，立即停止解析并且忽略后面所有的字符。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+## 31. 继承优缺点
+
+[参考JS原型链与继承别再被问倒了](https://juejin.im/post/58f94c9bb123db411953691b)
+
+## 32. class 实现队列 链表
+[艾伦-前端数据结构与算法系列](https://www.cnblogs.com/aaronjs/p/3623646.html)
+## 33. array.sort如何实现的
+[参考githubarray源码-](https://github.com/v8/v8/blob/6.7.241/src/js/array.js#L668)
+## 34. 实现object.create
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>function create(proto) {
+function F() {};
+F.prototype = proto;
+F.prototype.constructor = F;
+return new F();
+}</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[关于JS中一些重要的api实现, 巩固你的原生JS功底
+](https://juejin.im/post/5d635566e51d4561e224a360)
+
+## 35. 说一下Reflect
+[只能贴下MDN了](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
+## 36. 说一下generator
+[zhangxiang958-理解 ES6 generator ](https://github.com/zhangxiang958/zhangxiang958.github.io/issues/32)
+
+[阮一峰](http://es6.ruanyifeng.com/#docs/generator)
+
+## 37. 说一下proxy
+
+[Proxy及其优势](https://juejin.im/post/5d46a94e6fb9a06b24430027)
+
+[快来围观一下JavaScript的Proxy](https://juejin.im/post/5b09234d6fb9a07acf569905)
+
+[Proxy 的巧用](https://juejin.im/post/5d2e657ae51d4510b71da69d)
+
+## 38. offsetWidth，clientWidth，scrollWidth 的区别
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>clientWidth：元素的 width + padding</p> <p>offsetWidth：元素的 width + padding + border</p> <p>scrollWidth：</p> <ul><li>内部元素小于外部元素，scrollWidth = width + padding</li> <li>内部元素大于外部元素，scrollWidth = width + padding + 溢出部分尺寸</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+## 39. arguments 是数组吗
+
+arguments 是数组吗？怎么实现用它调用数组方法？类数组和数组的区别是什么？arguments 有 length 属性吗？
+
+1、arguments 不是数组，但有 length 属性。无法使用数组方法。
+
+2、可以转换成数组，因为它有 Symbol(Symbol.iterator) 方法。
+
+```js
+[...arguments];
+Array.prototype.slice.call(arguments);
+Array.from(arguments);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>3、类数组是一个对象</p> <h2 id="_40-手写一个-bind-函数"><a href="#_40-手写一个-bind-函数" class="header-anchor">#</a> 40. 手写一个 bind 函数</h2> <ul><li>绑定 this</li> <li>bind 后可以被 new 函数调用</li> <li>容错处理</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">bind2</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> <span class="token operator">...</span>rest</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">this</span> <span class="token operator">!==</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'只能由 function 调用'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> func <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> <span class="token function-variable function">result</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">func</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>
+      <span class="token comment">// 如果是 new 对象出的，this绑定的应该绑定为构造函数</span>
+      <span class="token keyword">this</span> <span class="token keyword">instanceof</span> <span class="token class-name">result</span> <span class="token operator">?</span> <span class="token keyword">this</span> <span class="token operator">:</span> ctx<span class="token punctuation">,</span>
+      rest<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> <span class="token function-variable function">fNOP</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  fNOP<span class="token punctuation">.</span>prototype <span class="token operator">=</span> func<span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+  result<span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">fNOP</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="_41-微任务和宏任务"><a href="#_41-微任务和宏任务" class="header-anchor">#</a> 41. 微任务和宏任务</h2> <p>微任务包括 process.nextTick ，promise ，MutationObserver，其中 process.nextTick 为 Node 独有。</p> <p>宏任务包括 script ， setTimeout ，setInterval ，setImmediate ，I/O ，UI rendering。</p> <h2 id="_42-用过-nodejs-的-eventemitter-模块吗，它是怎么实现功能的，步骤是什么"><a href="#_42-用过-nodejs-的-eventemitter-模块吗，它是怎么实现功能的，步骤是什么" class="header-anchor">#</a> 42. 用过 NodeJS 的 EventEmitter 模块吗，它是怎么实现功能的，步骤是什么</h2> <p>类似于 <a href="https://yhlben.github.io/blog/js-observer.html" target="_blank" rel="noopener noreferrer">观察者模式<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_43-js-new-过程中发生了什么"><a href="#_43-js-new-过程中发生了什么" class="header-anchor">#</a> 43. JS new 过程中发生了什么</h2> <p>1，创建一个以这个函数为原型的空对象.</p> <p>2，将函数的 <code>prototype</code> 赋值给对象的 <code>__proto__</code> 属性。</p> <p>3，将对象作为函数的 <code>this</code> 传进去。如果有 return 出来东西是对象的话就直接返回该对象，如果不是就返回创建的这个对象。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">newFunc</span><span class="token punctuation">(</span><span class="token parameter">father<span class="token punctuation">,</span> <span class="token operator">...</span>rest</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  result<span class="token punctuation">.</span>__proto <span class="token operator">=</span> father<span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> result2 <span class="token operator">=</span> <span class="token function">father</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> rest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token keyword">typeof</span> result2 <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">||</span> <span class="token keyword">typeof</span> result2 <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+    result2 <span class="token operator">!==</span> <span class="token keyword">null</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> result2<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="_44-settimeout-和-setinterval-方法有执行顺序吗"><a href="#_44-settimeout-和-setinterval-方法有执行顺序吗" class="header-anchor">#</a> 44. setTimeout 和 setInterval 方法有执行顺序吗</h2> <p>setTimeout 等待 xx 毫秒后，把方法推入异步队列。</p> <p>setInterval 每隔 xx 毫秒，把方法推入异步队列。</p> <p>setInterval 有个了例外：当间隙时间较小、方法内部执行非常耗时的时候，会导致间隔不连续。</p> <p>例如： 每隔 100ms 执行 fn，如果 fn 执行时间是 150ms，那么第二次执行，会在 150ms 处执行（异步事件会等待同步事件执行完后才执行）。</p> <blockquote><p>可以使用 setTimeout 自调用，在确定方法执行完后，再推入异步队列。</p></blockquote> <h2 id="_45-手写一个-call-函数"><a href="#_45-手写一个-call-函数" class="header-anchor">#</a> 45. 手写一个 call 函数</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myCall</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> <span class="token operator">...</span>rest</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// context是需要绑定的作用域</span>
+  <span class="token keyword">var</span> context <span class="token operator">=</span> context <span class="token operator">||</span> window<span class="token punctuation">;</span>
+  context<span class="token punctuation">.</span>fn <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span>rest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">delete</span> context<span class="token punctuation">.</span>fn<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_46-分析这一段代码的返回结果"><a href="#_46-分析这一段代码的返回结果" class="header-anchor">#</a> 46. 分析这一段代码的返回结果</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">var</span> <span class="token function-variable function">b</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  a <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token keyword">await</span> <span class="token number">10</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'b中的a：'</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+a<span class="token operator">++</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'外部a：'</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>首先函数 b 先执行，在执行到 await 10 之前变量 a 还是 0，因为 await 内部实现了 generator ，generator 会保留堆栈中东西，所以这时候 a = 0 被保存了下来</li> <li>因为 await 是异步操作，后来的表达式不返回 Promise 的话，就会包装成 Promise.reslove(返回值)，然后会去执行函数外的同步代码</li> <li>同步代码执行完毕后开始执行异步代码，将保存下来的值拿出来使用，这时候 a = 0 + 10</li></ul> <p>上述解释中提到了 await 内部实现了 generator，其实 await 就是 generator 加上 promise 的语法糖，且内部实现了自动执行 generator。如果你熟悉 co 的话，其实自己就可以实现这样的语法糖。</p> <h2 id="_47-js-代码在-v8-中的优化"><a href="#_47-js-代码在-v8-中的优化" class="header-anchor">#</a> 47. JS 代码在 V8 中的优化</h2> <p>js 代码如果要运行起来，必须要一个编译器来编译（V8），以下是 V8 中编译代码的过程：</p> <ul><li>将 JS 代码编译成抽象语法树（AST）。</li> <li>Ignition 将 AST 转化为 ByteCode。</li> <li>TuboFan 将 ByteCode 转化为 MachineCode（可选）。</li></ul> <p>我们都知道，机器码运行时的效率是最快的，所以如果能让更多的 js 代码转换成机器码，就能大幅度提高 js 运行效率。但受 js 动态类型的影响，V8 并不敢直接编译成机器语言，而是编译成 ByteCode。只有是纯静态的变量，才可以直接编译成机器代码，所以应该多编写静态类型的变量。</p> <ul><li>可以压缩合并 js 代码，减少嵌套函数，减少编译时间。</li> <li>变量定义时是什么类型，就永远当做这个类型来使用，不要将对象修改为另一个类型（使用 typescript）。</li> <li>函数在定义时，需要传递的参数类型也不要改变（使用 typescript）。</li></ul> <h2 id="_49-写出以下函数打印结果"><a href="#_49-写出以下函数打印结果" class="header-anchor">#</a> 49. 写出以下函数打印结果</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>sex <span class="token operator">=</span> <span class="token string">'man'</span><span class="token punctuation">;</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>sex<span class="token operator">:</span> <span class="token string">'woman'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span>sex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p2<span class="token punctuation">.</span>sex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>这里的难点在于 p1.sex 没有被修改成 woman，因为在 new 创建一个对象时，原型对象会被挂载到新对象上。修改 Person 的原型，并不能修改到 p1 的原型。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/31/2019, 5:41:02 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/interview/css.html">
+        CSS 面试题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ec9e1db8.js" defer></script><script src="/assets/js/2.5105d25b.js" defer></script><script src="/assets/js/74.e8eba774.js" defer></script>
+  </body>
+</html>

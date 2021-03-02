@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>小程序封装请求 | thorn</title>
+    <meta name="description" content="If it doesn&#39;t challenge you, it won&#39;t change you">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/hero.jpeg">
+    
+    <link rel="preload" href="/assets/css/0.styles.9970a1b7.css" as="style"><link rel="preload" href="/assets/js/app.ec9e1db8.js" as="script"><link rel="preload" href="/assets/js/2.5105d25b.js" as="script"><link rel="preload" href="/assets/js/49.adbcf55e.js" as="script"><link rel="preload" href="/assets/js/5.9a08207a.js" as="script"><link rel="prefetch" href="/assets/js/10.447d264d.js"><link rel="prefetch" href="/assets/js/11.a67126fe.js"><link rel="prefetch" href="/assets/js/12.e67d7c03.js"><link rel="prefetch" href="/assets/js/13.e74699b1.js"><link rel="prefetch" href="/assets/js/14.daac54b3.js"><link rel="prefetch" href="/assets/js/15.0f024910.js"><link rel="prefetch" href="/assets/js/16.99964836.js"><link rel="prefetch" href="/assets/js/17.58bbf716.js"><link rel="prefetch" href="/assets/js/18.b8ea0368.js"><link rel="prefetch" href="/assets/js/19.a4ccf80a.js"><link rel="prefetch" href="/assets/js/20.920ab0ea.js"><link rel="prefetch" href="/assets/js/21.485dff2a.js"><link rel="prefetch" href="/assets/js/22.e07e8fa1.js"><link rel="prefetch" href="/assets/js/23.5e7a786a.js"><link rel="prefetch" href="/assets/js/24.ee0a2e23.js"><link rel="prefetch" href="/assets/js/25.9a5d945f.js"><link rel="prefetch" href="/assets/js/26.8880cc0a.js"><link rel="prefetch" href="/assets/js/27.2d10da60.js"><link rel="prefetch" href="/assets/js/28.72612751.js"><link rel="prefetch" href="/assets/js/29.5e8ef889.js"><link rel="prefetch" href="/assets/js/3.0fd003c2.js"><link rel="prefetch" href="/assets/js/30.fc64741a.js"><link rel="prefetch" href="/assets/js/31.09b7886c.js"><link rel="prefetch" href="/assets/js/32.8f5c32e1.js"><link rel="prefetch" href="/assets/js/33.678e242a.js"><link rel="prefetch" href="/assets/js/34.a370b365.js"><link rel="prefetch" href="/assets/js/35.d9636a96.js"><link rel="prefetch" href="/assets/js/36.80a5d3d9.js"><link rel="prefetch" href="/assets/js/37.a9bc4c8a.js"><link rel="prefetch" href="/assets/js/38.8d137c20.js"><link rel="prefetch" href="/assets/js/39.d950f39f.js"><link rel="prefetch" href="/assets/js/4.c35620b1.js"><link rel="prefetch" href="/assets/js/40.7cdaeeec.js"><link rel="prefetch" href="/assets/js/41.e9a82ee2.js"><link rel="prefetch" href="/assets/js/42.75128b4a.js"><link rel="prefetch" href="/assets/js/43.6686c4c0.js"><link rel="prefetch" href="/assets/js/44.8bbf4319.js"><link rel="prefetch" href="/assets/js/45.aa0e23d2.js"><link rel="prefetch" href="/assets/js/46.fc8d5367.js"><link rel="prefetch" href="/assets/js/47.67f8133f.js"><link rel="prefetch" href="/assets/js/48.e9014c13.js"><link rel="prefetch" href="/assets/js/50.fbcee007.js"><link rel="prefetch" href="/assets/js/51.584fc3ee.js"><link rel="prefetch" href="/assets/js/52.e23bd034.js"><link rel="prefetch" href="/assets/js/53.6c7ec624.js"><link rel="prefetch" href="/assets/js/54.340c591f.js"><link rel="prefetch" href="/assets/js/55.f5fdcdf9.js"><link rel="prefetch" href="/assets/js/56.183d3539.js"><link rel="prefetch" href="/assets/js/57.ba39cb78.js"><link rel="prefetch" href="/assets/js/58.c559c57b.js"><link rel="prefetch" href="/assets/js/59.e533ea69.js"><link rel="prefetch" href="/assets/js/6.7cfe4850.js"><link rel="prefetch" href="/assets/js/60.a1aef619.js"><link rel="prefetch" href="/assets/js/61.a8fca4de.js"><link rel="prefetch" href="/assets/js/62.3e7a3500.js"><link rel="prefetch" href="/assets/js/63.2d6fff96.js"><link rel="prefetch" href="/assets/js/64.9e127ca3.js"><link rel="prefetch" href="/assets/js/65.db55fab6.js"><link rel="prefetch" href="/assets/js/66.98a4730e.js"><link rel="prefetch" href="/assets/js/67.1cb5241f.js"><link rel="prefetch" href="/assets/js/68.e19546d2.js"><link rel="prefetch" href="/assets/js/69.7bfa8287.js"><link rel="prefetch" href="/assets/js/7.023c2539.js"><link rel="prefetch" href="/assets/js/70.2f28cf65.js"><link rel="prefetch" href="/assets/js/71.dc260279.js"><link rel="prefetch" href="/assets/js/72.30dec7cf.js"><link rel="prefetch" href="/assets/js/73.ea684256.js"><link rel="prefetch" href="/assets/js/74.e8eba774.js"><link rel="prefetch" href="/assets/js/75.0011fa76.js"><link rel="prefetch" href="/assets/js/76.68c4a18b.js"><link rel="prefetch" href="/assets/js/77.b36b7d34.js"><link rel="prefetch" href="/assets/js/78.9f3c27db.js"><link rel="prefetch" href="/assets/js/79.f2b1de05.js"><link rel="prefetch" href="/assets/js/8.44de4194.js"><link rel="prefetch" href="/assets/js/9.cab54723.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9970a1b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">thorn</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  interview
+</a></div><div class="nav-item"><a href="/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  Life
+</a></div><div class="nav-item"><a href="/book/" class="nav-link">
+  Read
+</a></div><div class="nav-item"><a href="/blogroll/" class="nav-link">
+  Blogroll
+</a></div> <a href="https://github.com/thorn929" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  interview
+</a></div><div class="nav-item"><a href="/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  Life
+</a></div><div class="nav-item"><a href="/book/" class="nav-link">
+  Read
+</a></div><div class="nav-item"><a href="/blogroll/" class="nav-link">
+  Blogroll
+</a></div> <a href="https://github.com/thorn929" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>框架</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/library-vue.html" class="sidebar-link">Vue 使用总结</a></li><li><a href="/blog/library-miniProgram.html" class="sidebar-link">小程序使用总结</a></li><li><a href="/blog/library-miniprogram-interface.html" class="active sidebar-link">小程序封装请求</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/library-miniprogram-interface.html#http-js" class="sidebar-link">http.js</a></li><li class="sidebar-sub-header"><a href="/blog/library-miniprogram-interface.html#dispatchrequest-js" class="sidebar-link">dispatchRequest.js</a></li><li class="sidebar-sub-header"><a href="/blog/library-miniprogram-interface.html#interceptor-js" class="sidebar-link">interceptor.js</a></li><li class="sidebar-sub-header"><a href="/blog/library-miniprogram-interface.html#index-js" class="sidebar-link">index.js</a></li><li class="sidebar-sub-header"><a href="/blog/library-miniprogram-interface.html#example" class="sidebar-link">Example</a></li></ul></li><li><a href="/blog/library-debug.html" class="sidebar-link">微信本地调试（以及vue提示： Invalid Host header）</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络协议</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS 基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>编程基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其它</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>总结</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="小程序封装请求"><a href="#小程序封装请求" class="header-anchor">#</a> 小程序封装请求</h1> <p>公司最近新开了小程序项目， 参考axios 重新封装了请求, 直接套用即可，有问题随时联系</p> <h2 id="http-js"><a href="#http-js" class="header-anchor">#</a> http.js</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> InterceptorManager <span class="token keyword">from</span> <span class="token string">'./interceptor.js'</span>
+<span class="token keyword">import</span> dispatchRequest <span class="token keyword">from</span> <span class="token string">'./dispatchRequest.js'</span>
+
+<span class="token comment">/**
+ * Create a new instance of httpRequest
+ *
+ */</span>
+<span class="token keyword">function</span> <span class="token function">httpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>interceptors <span class="token operator">=</span> <span class="token punctuation">{</span>
+    request<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">InterceptorManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    response<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">InterceptorManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Dispatch a request
+ */</span>
+
+httpRequest<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">request</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token comment">// 连接拦截器中间件</span>
+  <span class="token keyword">let</span> chain <span class="token operator">=</span> <span class="token punctuation">[</span>dispatchRequest<span class="token punctuation">,</span><span class="token keyword">undefined</span><span class="token punctuation">]</span>
+  <span class="token keyword">let</span> promise <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span>
+
+  <span class="token comment">// 注册请求拦截器</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">unshiftRequestInterceptors</span><span class="token punctuation">(</span><span class="token parameter">interceptor</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    chain<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span>interceptor<span class="token punctuation">.</span>fulfilled<span class="token punctuation">,</span> interceptor<span class="token punctuation">.</span>rejected<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// 注册响应拦截器</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">pushResponseInterceptors</span><span class="token punctuation">(</span><span class="token parameter">interceptor</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    chain<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>interceptor<span class="token punctuation">.</span>fulfilled<span class="token punctuation">,</span> interceptor<span class="token punctuation">.</span>rejected<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>chain<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    promise <span class="token operator">=</span> promise<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>chain<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>chain<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> promise
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">createInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> context <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">httpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> context
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> $http <span class="token operator">=</span> <span class="token function">createdInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> $http
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><h2 id="dispatchrequest-js"><a href="#dispatchrequest-js" class="header-anchor">#</a> dispatchRequest.js</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> detafultConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'x-token'</span><span class="token operator">:</span> <span class="token string">'xxxx12token'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    params<span class="token operator">:</span> <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> utils <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../utils/util.js'</span><span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">combination</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> combConfig
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>method <span class="token operator">===</span> <span class="token string">'GET'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    combConfig <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>detafultConfig<span class="token punctuation">,</span> config<span class="token punctuation">.</span>params<span class="token punctuation">)</span>
+    <span class="token keyword">delete</span> config<span class="token punctuation">.</span>params
+    <span class="token keyword">let</span> url <span class="token operator">=</span> utils<span class="token punctuation">.</span><span class="token function">createdQueryWidthUrl</span><span class="token punctuation">(</span>combConfig<span class="token punctuation">,</span>config<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+    combConfig <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> <span class="token punctuation">{</span>url<span class="token operator">:</span> url<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>method <span class="token operator">===</span> <span class="token string">'POST'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">let</span> data <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>detafultConfig<span class="token punctuation">,</span> config<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+    combConfig <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> <span class="token punctuation">{</span>data<span class="token operator">:</span> data<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    combConfig <span class="token operator">=</span> config
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> combConfig
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 向服务器发送请求
+ * @param {object} config 发起请求的数据
+ * @returns {Promise}
+ */</span>
+
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">dispatchRequest</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> combconfig <span class="token operator">=</span> <span class="token function">combination</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    combconfig <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>combconfig<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">success</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">fail</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">complete</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    wx<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>combconfig<span class="token punctuation">)</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">onAdapterResolution</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> response
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">function</span> <span class="token function">onAdapterRejection</span><span class="token punctuation">(</span><span class="token parameter">reason</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>reason<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><h2 id="interceptor-js"><a href="#interceptor-js" class="header-anchor">#</a> interceptor.js</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">InterceptorManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>handlers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * 向堆栈中添加新的拦截器
+ *
+ */</span>
+<span class="token class-name">InterceptorManager</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">use</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">use</span><span class="token punctuation">(</span><span class="token parameter">fulfilled<span class="token punctuation">,</span> rejected</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        fulfilled<span class="token operator">:</span> fulfilled<span class="token punctuation">,</span>
+        rejected<span class="token operator">:</span> rejected
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 迭代所有已注册的拦截器</span>
+<span class="token class-name">InterceptorManager</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">forEach</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">forEachHandler</span><span class="token punctuation">(</span><span class="token parameter">h</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>h <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">fn</span><span class="token punctuation">(</span>h<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> l <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> l<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">forEachHandler</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> InterceptorManager
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="index-js"><a href="#index-js" class="header-anchor">#</a> index.js</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> $http <span class="token keyword">from</span> <span class="token string">'./http.js'</span>
+
+$http<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">onFulfilled</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    wx<span class="token punctuation">.</span><span class="token function">showLoading</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">'22'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">function</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'config拦截器失败了'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+$http<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token keyword">function</span> <span class="token function">onFulfilled</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    wx<span class="token punctuation">.</span><span class="token function">hideLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> code <span class="token operator">=</span> <span class="token operator">+</span>response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>code
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        code <span class="token number">401</span><span class="token operator">:</span>
+        <span class="token comment">// .....</span>
+        code <span class="token number">500</span><span class="token operator">:</span>
+        <span class="token comment">// .....</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">function</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token parameter">reason</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是拦截器失败'</span><span class="token punctuation">)</span>
+    wx<span class="token punctuation">.</span><span class="token function">hideLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> $http
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h2 id="example"><a href="#example" class="header-anchor">#</a> Example</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// get</span>
+axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/test'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// post</span>
+axios<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'thorn'</span><span class="token punctuation">,</span>
+    possword<span class="token operator">:</span> <span class="token string">'111'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><div id="vcomments"></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/7/2019, 10:35:59 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/library-miniProgram.html" class="prev">
+        小程序使用总结
+      </a></span> <span class="next"><a href="/blog/library-debug.html">
+        微信本地调试（以及vue提示： Invalid Host header）
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ec9e1db8.js" defer></script><script src="/assets/js/2.5105d25b.js" defer></script><script src="/assets/js/49.adbcf55e.js" defer></script><script src="/assets/js/5.9a08207a.js" defer></script>
+  </body>
+</html>
